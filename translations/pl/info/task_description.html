@@ -1,0 +1,52 @@
+<!-- Describe task in general -->
+
+<p style="text-align: justify;">
+    <a target="_blank" href="https://mathworld.wolfram.com/WythoffArray.html">Wythoff array</a> (proszę zobaczyć również <a target="_blank" href="https://en.wikipedia.org/wiki/Wythoff_array">Wikipedia article</a> dla ilustracji) jest nieskończoną dwuwymiarową siatką liczb całkowitych, która jest zasiana <b>1</b> i <b>2</b>, aby rozpocząć pierwszy rząd. W każdym rzędzie każdy element jest równy sumie dwóch poprzednich elementów, więc pierwszy rząd zawiera dokładnie <a target="_blank" href="https://en.wikipedia.org/wiki/Fibonacci_sequence">Fibonacci numbers</a>. 
+</p>
+<p style="text-align: justify;">
+    Pierwszym elementem każdego wiersza po pierwszym jest <strong>najmniejsza liczba całkowita c, która nie pojawia się nigdzie w poprzednich wierszach</strong>. Ponieważ każdy wiersz jest ściśle rosnący i rośnie wykładniczo szybko, można to sprawdzić, patrząc na stosunkowo krótkie skończone prefiksy tych wierszy. Aby określić drugi element tego wiersza, niech <b>a</b> i <b>b</b> będą dwoma pierwszymi elementami poprzedniego wiersza. Jeśli różnica <b>c-a</b> jest równa <b>2</b>, drugi element tego wiersza jest równy <b>b+3</b>, a w przeciwnym razie element ten jest równy <b>b+5</b>.
+</p>
+<p style="text-align: justify;">
+    Ta konstrukcja gwarantuje, że tablica Wythoffa będzie <strong>interspersją</strong> dodatnich liczb całkowitych; każda dodatnia liczba całkowita pojawi się <strong>dokładnie raz</strong> w całej nieskończonej siatce, bez żadnych luk ani duplikatów! (Wynik ten ładnie podkreśla również głębsze znaczenie kombinatoryczne zwodniczo prostych liczb Fibonacciego jako potencjalnych elementów składowych liczb całkowitych i ich ciągów)
+</p>
+<p style="text-align: justify;">
+    Ta funkcja powinna zwrócić pozycję <b>n</b> w tablicy Wythoffa jako {% if is_js %}tablica <b>[row, col]</b>{% else %} krotka <b>(row, col)</b>{% endif %} , wiersze i kolumny zaczynają się od zera.
+</p>
+
+<!-- <p style="text-align: center;">
+    <img  title="example" src="{{MEDIA}}example.png" alt="example" style="max-height: 83px"/>
+</p> -->
+
+<!-- Explain input and output values -->
+<p>
+   <strong>Wejście:</strong> Integer <span>({% if is_js %}numebr{% else %}int{% endif %})</span>.
+</p>
+
+<p>
+   <strong>Wyjście:</strong> Pozycja jako tablica {% if is_js %}{% else %} krotka{% endif %} <span>({% if is_js %}array{% else %}tuple{% endif %})</span> dwóch liczb całkowitych. 
+</p>
+
+
+<p>
+    <strong>Przykłady:</strong>
+</p>
+
+<pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
+
+<!-- Here you can explain how it can be used in development -->
+<!-- The section is optional -->
+<!-- <p class="for_info_only">
+
+    <strong>How it’s used:</strong>
+    <i>(math is used everywhere)</i>
+</p> -->
+
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<!-- <p>
+    <strong>Preconditions:</strong>
+    <ul>
+    <li><i>both given ints should be between -1000 and 1000</i></li>
+    </ul>
+</p> -->
+<p><i>Misja została pobrana z <span>Python CCPS 109</span>. Jest ona nauczana dla <span>Ryerson Chang School of Continuing Education</span> przez <a href="https://github.com/ikokkari">Ilkka Kokkarinen</a></i></p>
