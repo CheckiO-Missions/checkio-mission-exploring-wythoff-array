@@ -1,0 +1,52 @@
+<!-- Describe task in general -->
+
+<p style="text-align: justify;">
+    <a target="_blank" href="https://mathworld.wolfram.com/WythoffArray.html">Wythoff array</a> (另请参阅<a target="_blank" href="https://en.wikipedia.org/wiki/Wythoff_array">Wikipedia article</a> 以获得说明）是一个无限的二维整数网格，第一行的种子是<b>1</b> 和<b>2</b> 。在每一行中，每个元素都等于前两个元素的和，因此第一行包含的正是<a target="_blank" href="https://en.wikipedia.org/wiki/Fibonacci_sequence">Fibonacci numbers</a> 。  
+</p>
+<p style="text-align: justify;">
+    第一行之后每行的第一个元素是<strong>前几行中没有出现的最小整数 c</strong>。由于每一行都是严格升序且以指数速度增长，因此可以通过查看这些行的相对较短的有限前缀来确定。要确定该行的第二个元素，让<b>a</b> 和<b>b</b> 分别是前一行的前两个元素。如果<b>c-a</b> 的差值等于<b>2</b> ，则该行的第二个元素等于<b>b+3</b> ，否则该元素等于<b>b+5</b> 。
+</p>
+<p style="text-align: justify;">
+    这种结构保证了 Wythoff 数组是正整数的<strong>穿插</strong>；每个正整数都会在整个无限网格中出现<strong>一次</strong>，没有任何空白或重复！(这一结果也很好地突出了斐波纳契数作为整数及其序列的潜在构件所具有的更深层次的组合重要性）。
+</p>
+<p style="text-align: justify;">
+    此函数应返回<b>n</b> 在 Wythoff 数组中的位置，即{% if is_js %}数组<b>[row, col]</b>{% else %} 元组<b>(row, col)</b>{% endif %} ，行和列都从零开始。
+</p>
+
+<!-- <p style="text-align: center;">
+    <img  title="example" src="{{MEDIA}}example.png" alt="example" style="max-height: 83px"/>
+</p> -->
+
+<!-- Explain input and output values -->
+<p>
+   <strong>输入：</strong>整数 <span>({% if is_js %}numebr{% else %}int{% endif %})</span>.
+</p>
+
+<p>
+   <strong>输出：</strong>位置作为{% if is_js %}数组{% else %}元组{% endif %} <span>({% if is_js %}array{% else %}tuple{% endif %})</span>的两个整数。 
+</p>
+
+
+<p>
+    <strong>举例说明：</strong>
+</p>
+
+<pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
+
+<!-- Here you can explain how it can be used in development -->
+<!-- The section is optional -->
+<!-- <p class="for_info_only">
+
+    <strong>How it’s used:</strong>
+    <i>(math is used everywhere)</i>
+</p> -->
+
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<!-- <p>
+    <strong>Preconditions:</strong>
+    <ul>
+    <li><i>both given ints should be between -1000 and 1000</i></li>
+    </ul>
+</p> -->
+<p><i>任务取自<span>Python CCPS 109</span> 。它通过以下方式传授<span>Ryerson Chang School of Continuing Education</span> <a href="https://github.com/ikokkari">Ilkka Kokkarinen</a></i></p>
