@@ -1,0 +1,52 @@
+<!-- Describe task in general -->
+
+<p style="text-align: justify;">
+    <a target="_blank" href="https://mathworld.wolfram.com/WythoffArray.html">Wythoff array</a> (див. також <a target="_blank" href="https://en.wikipedia.org/wiki/Wythoff_array">Wikipedia article</a> для ілюстрації) - це нескінченна двовимірна сітка цілих чисел, яка починається з <b>1</b> та <b>2</b> для початку першого рядка. У кожному рядку кожен елемент дорівнює сумі двох попередніх елементів, тому перший рядок містить саме <a target="_blank" href="https://en.wikipedia.org/wiki/Fibonacci_sequence">Fibonacci numbers</a>. 
+</p>
+<p style="text-align: justify;">
+    Першим елементом кожного рядка після першого є <strong>найменше ціле число c, яке ніде не зустрічається у попередніх рядках</strong>. Оскільки кожен рядок є строго зростаючим і зростає експоненціально швидко, ви можете дізнатися це, подивившись на відносно короткі скінченні префікси цих рядків. Щоб визначити другий елемент цього ряду, нехай <b>a</b> і <b>b</b> - перші два елементи попереднього ряду. Якщо різниця <b>c-a</b> дорівнює <b>2</b>, то другий елемент цього рядка дорівнює <b>b+3</b>, інакше цей елемент дорівнює <b>b+5</b>.
+</p>
+<p style="text-align: justify;">
+    Така конструкція гарантує, що масив Вайтоффа буде являти собою <strong>інтерференцію</strong> натуральних чисел; кожне натуральне число буде зустрічатися <strong>рівно один</strong> раз у всій нескінченній сітці, без пропусків і дублікатів ніде! (Цей результат також гарно підкреслює глибоку комбінаторну важливість оманливо простих чисел Фібоначчі як потенційних будівельних блоків цілих чисел та їх послідовностей)
+</p>
+<p style="text-align: justify;">
+    Ця функція повинна повертати позицію <b>n</b> у масиві Вайтоффа як {% if is_js %}масив <b>[row, col]</b>{% else %} кортеж <b>(row, col)</b>{% endif %} , рядки і стовпці якого починаються з нуля.
+</p>
+
+<!-- <p style="text-align: center;">
+    <img  title="example" src="{{MEDIA}}example.png" alt="example" style="max-height: 83px"/>
+</p> -->
+
+<!-- Explain input and output values -->
+<p>
+   <strong>Вхідні дані:</strong> Ціле число <span>({% if is_js %}numebr{% else %}int{% endif %})</span>.
+</p>
+
+<p>
+   <strong>Вихідні дані:</strong> Позицію у вигляді {% if is_js %}масиву{% else %}кортежу{% endif %} <span>({% if is_js %}array{% else %}tuple{% endif %})</span> з двох цілих чисел. 
+</p>
+
+
+<p>
+    <strong>Приклади:</strong>
+</p>
+
+<pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
+
+<!-- Here you can explain how it can be used in development -->
+<!-- The section is optional -->
+<!-- <p class="for_info_only">
+
+    <strong>How it’s used:</strong>
+    <i>(math is used everywhere)</i>
+</p> -->
+
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<!-- <p>
+    <strong>Preconditions:</strong>
+    <ul>
+    <li><i>both given ints should be between -1000 and 1000</i></li>
+    </ul>
+</p> -->
+<p><i>Завдання взято з сайту <span>Python CCPS 109</span>. Його розв'язують для <span>Ryerson Chang School of Continuing Education</span> за допомогою <a href="https://github.com/ikokkari">Ilkka Kokkarinen</a></i></p>
