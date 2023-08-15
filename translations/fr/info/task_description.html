@@ -1,0 +1,52 @@
+<!-- Describe task in general -->
+
+<p style="text-align: justify;">
+    <a target="_blank" href="https://mathworld.wolfram.com/WythoffArray.html">Wythoff array</a> (voir aussi <a target="_blank" href="https://en.wikipedia.org/wiki/Wythoff_array">Wikipedia article</a> pour l'illustration) est une grille bidimensionnelle infinie d'entiers qui est ensemencée avec <b>1</b> et <b>2</b> pour commencer la première ligne. Dans chaque rangée, chaque élément est égal à la somme des deux éléments précédents, de sorte que la première rangée contient précisément <a target="_blank" href="https://en.wikipedia.org/wiki/Fibonacci_sequence">Fibonacci numbers</a>. 
+</p>
+<p style="text-align: justify;">
+    Le premier élément de chaque ligne après la première est le <strong>plus petit entier c qui n'apparaît nulle part dans les lignes précédentes</strong>. Comme chaque ligne est strictement ascendante et croît exponentiellement vite, vous pouvez le découvrir en examinant les préfixes finis relativement courts de ces lignes. Pour déterminer le deuxième élément de cette ligne, laissez <b>a</b> et <b>b</b> être les deux premiers éléments de la ligne précédente. Si la différence <b>c-a</b> est égale à <b>2</b>, le deuxième élément de cette rangée est <b>b+3</b>, et dans le cas contraire, cet élément est <b>b+5</b>.
+</p>
+<p style="text-align: justify;">
+    Cette construction garantit que le tableau de Wythoff est une <strong>interversion d'</strong> entiers positifs; chaque entier positif apparaîtra <strong>exactement une fois</strong> dans l'ensemble de la grille infinie, sans lacunes ni doublons nulle part! (Ce résultat met également en évidence l'importance combinatoire plus profonde des nombres de Fibonacci, d'une simplicité trompeuse, en tant que blocs de construction potentiels des entiers et de leurs séquences)
+</p>
+<p style="text-align: justify;">
+    Cette fonction devrait renvoyer la position de <b>n</b> dans le tableau de Wythoff sous la forme suivante: {% if is_js %}tableau <b>[row, col]</b>{% else %} tuple <b>(row, col)</b>{% endif %} , les lignes et les colonnes commençant toutes deux à zéro.
+</p>
+
+<!-- <p style="text-align: center;">
+    <img  title="example" src="{{MEDIA}}example.png" alt="example" style="max-height: 83px"/>
+</p> -->
+
+<!-- Explain input and output values -->
+<p>
+   <strong>Entrée:</strong> Entier <span>({% if is_js %}numebr{% else %}int{% endif %})</span>.
+</p>
+
+<p>
+   <strong>Sortie:</strong> Position sous forme de {% if is_js %}array{% else %}tuple{% endif %} <span>({% if is_js %}array{% else %}tuple{% endif %})</span> de deux entiers. 
+</p>
+
+
+<p>
+    <strong>Exemples:</strong>
+</p>
+
+<pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
+
+<!-- Here you can explain how it can be used in development -->
+<!-- The section is optional -->
+<!-- <p class="for_info_only">
+
+    <strong>How it’s used:</strong>
+    <i>(math is used everywhere)</i>
+</p> -->
+
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<!-- <p>
+    <strong>Preconditions:</strong>
+    <ul>
+    <li><i>both given ints should be between -1000 and 1000</i></li>
+    </ul>
+</p> -->
+<p><i>La mission a été prise à <span>Python CCPS 109</span>. Elle est enseignée à <span>Ryerson Chang School of Continuing Education</span> par <a href="https://github.com/ikokkari">Ilkka Kokkarinen</a></i></p>
